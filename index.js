@@ -7,7 +7,7 @@ var app = apiai("e6483d023e1a4ef2a63038636ea3ec3e");
 }); 
  */
 var options = {
-    sessionId: '<UNIQE SESSION ID>'
+    sessionId: 'aa25ee14-0efb-4292-9bdf-dccf69063db1'
 };
 
 var request = app.textRequest('Hello', options);
