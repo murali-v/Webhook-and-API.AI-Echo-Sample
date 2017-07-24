@@ -17,6 +17,7 @@ expressApp.post('/echo', function (req, res) {
         speech: speech,
         displayText: speech,
         source: 'webhook-echo-sample'
+        data: 'req.body.result'
     });
     
     var request = app.textRequest('', {
