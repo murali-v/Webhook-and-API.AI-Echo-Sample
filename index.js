@@ -27,4 +27,4 @@ expressApp.post('/testHello', function (req, res) {
     request.end();
 })
 
-expressApp.listen(8000);
+expressApp.listen(process.env.PORT || 8000);
