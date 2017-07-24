@@ -5,11 +5,7 @@ var app = apiai("e6483d023e1a4ef2a63038636ea3ec3e");
 var express = require('express')
 var expressApp = express()
 
-expressApp.post('/testHelloSimple', function (req, res) {
-    res.send("Hello");
-});
-
-expressApp.post('/testHello', function (req, res) {
+expressApp.post('/echo', function (req, res) {
     var request = app.textRequest('Hello', {
         sessionId: 'aa25ee14-0efb-4292-9bdf-dccf69063db1'
     });
