@@ -1,10 +1,15 @@
 var apiai = require('apiai');
 
 var app = apiai("e6483d023e1a4ef2a63038636ea3ec3e");
+const bodyParser = require('body-parser');
 
 var express = require('express')
 var expressApp = express()
 
+expressApp.use(bodyParser.urlencoded({
+    extended: true
+}));
+expressApp.use(bodyParser.json());
 expressApp.post('/echo', function (req, res) {
     
     var speech = req.body.result && req.body.result.parameters && req.body.result.parameters.echoText ? req.body.result.parameters.echoText : "Seems like some problem. Speak again."
