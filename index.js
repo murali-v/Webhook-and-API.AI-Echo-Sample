@@ -12,10 +12,12 @@ expressApp.get('/testHello', function (req, res) {
     
     request.on('response', function(response) {
         console.log(response);
+        res.send(response);
     });
 
     request.on('error', function(error) {
         console.log(error);
+        res.send(error);
     });
 
     request.end();
