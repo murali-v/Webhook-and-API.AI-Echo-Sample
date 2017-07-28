@@ -9,9 +9,9 @@ expressApp.post('/echo', function (req, res) {
        var data = req.replyData;
        var botID = req.botID
        return res.json({
-        info: data,
-        displayText: data,
-        source: 'webhook-echo-sample',
-        responseOverride: "This is an echo from the webhook"
+        "info": data,
+        "displayText": data,
+        "source": 'webhook-echo-sample',
+        "responseOverride": "This is an echo from the webhook"
     });
 });
