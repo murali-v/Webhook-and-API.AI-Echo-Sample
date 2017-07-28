@@ -1,3 +1,11 @@
+var express = require('express')
+var expressApp = express()
+
+expressApp.use(bodyParser.urlencoded({
+    extended: true
+}));
+expressApp.use(bodyParser.json());
+
 exports.handler = (event, context, callback) => {
 
     // VIEW DOCS HERE:  https://github.com/MotionAI/nodejs-samples
