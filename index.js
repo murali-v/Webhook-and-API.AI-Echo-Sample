@@ -45,7 +45,7 @@ exports.handler = (event, context, callback) => {
     console.log("type of Custom variable is: " + typeof(event.customVars))
    
     //console.log("evnt: " + event.customVars);
-    var myJSON = JSON.parse(event.customVars);
+    var myJSON = JSON.parse(event.replyData);
     console.log(myJSON);
     //console.log("name:" + myJSON.client);
     console.log("myJSONissuetype: " + myJSON.issue);
